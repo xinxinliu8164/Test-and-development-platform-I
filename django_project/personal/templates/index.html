@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+接口自动化
+{% endblock %}
+
+
+{% block content %}
+<body style="padding-top: 40px;padding-bottom: 40px;
+
+background-image: url('https://i0.hippopx.com/photos/885/26/342/wave-signal-communication-technology-preview.jpg');
+{#background-image: url('https://i0.hippopx.com/photos/720/852/960/lake-water-wave-mirroring-preview.jpg');#}
+background-repeat: no-repeat;
+        background-size: auto 1080px">
+
+    <div class="container">
+
+        <form style="max-width: 330px;padding: 15px;margin: 0 auto;" class="form-signin" action="/index/" method="post">
+            <h2 style="width: 300px;color: #faffc4" class="form-signin-heading">Please sign in</h2>
+            <label style="width: 300px" for="username" class="sr-only">username</label>
+            <input style="width: 300px" type="text" id="inputUsername" class="form-control" placeholder="username" required autofocus>
+
+            <label style="width: 300px" for="inputPassword" class="sr-only">password</label>
+            <input style="width: 300px" type="password" id="inputPassword" class="form-control" placeholder="password" required>
+            </br>
+            <button style="width: 300px" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+
+    </div> <!-- /container -->
+
+</body>
+{% endblock %}
+
+{#<form action="/index/" method="post">#}
+{#    <p>username: <input type="text" name="username"/></p>#}
+{#    <p>password: <input type="password" name="password"/></p>#}
+{#    <div style="color: firebrick">{{ error_msg }}</div>#}
+{#    {% csrf_token %}#}
+{#    <input type="submit" value="Submit"/>#}
+{#</form>#}
