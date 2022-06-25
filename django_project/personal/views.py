@@ -31,14 +31,25 @@ def index(requests):
             return render(requests, 'index.html', {'error_msg': error_msg})
         else:
             auth.login(requests, user)  # 记录登录
-            return HttpResponseRedirect('/manage/')
+            return HttpResponseRedirect('/manage_project/')
 
-@login_required()  # 可保证manage页面只有登录成功的用户才能访问，退出的用户user将被删除，无法访问
-def manage(requests):
-    return render(requests, 'manage.html')
 
 @login_required()
 def logout(requests):
     auth.logout(requests)
     return render(requests, 'index.html')
+
+
+@login_required()  # 可保证manage页面只有登录成功的用户才能访问，退出的用户user将被删除，无法访问
+def manage_project(requests):
+    return render(requests, 'manage_project.html')
+
+
+@login_required()
+def manage_module(requests):
+    return render(requests, 'manage_module.html')
+
+@login_required()
+def manage_case(requests):
+    return render(requests, 'manage_case.html')
 

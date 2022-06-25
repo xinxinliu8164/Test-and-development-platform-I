@@ -1,0 +1,55 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="190" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="PyIncorrectDocstringInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="4">
+            <item index="0" class="java.lang.String" itemvalue="Deprecated" />
+            <item index="1" class="java.lang.String" itemvalue="wda" />
+            <item index="2" class="java.lang.String" itemvalue="Pillow" />
+            <item index="3" class="java.lang.String" itemvalue="packaging" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N803" />
+          <option value="N801" />
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="wda.Client" />
+          <option value="str.items" />
+          <option value="str.pop" />
+          <option value="dict.items" />
+          <option value="tuple.startswith" />
+          <option value="typing.KeysView.__getitem__" />
+          <option value="typing.ValuesView.__getitem__" />
+          <option value="list.click" />
+          <option value="core.workspace" />
+          <option value="ppdet.core.*" />
+          <option value="dict.bounds" />
+          <option value="test_0208.test_01_test_interface.TestInterface.do_request" />
+          <option value="test_0208.ddt_case.TestInterface.do_request" />
+          <option value="test_0208.ddt_case.TestInterface.do_excel" />
+          <option value="ddt.basestring" />
+          <option value="str.replace" />
+          <option value="cases.regression.test_023_SendFileMsg.T23SendFileMsg.photo_name" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
