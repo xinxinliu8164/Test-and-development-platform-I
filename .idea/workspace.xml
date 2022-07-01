@@ -2,13 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2348ab7e-0a92-4331-907e-86edb27f7192" name="Default Changelist" comment="11">
-      <change afterPath="$PROJECT_DIR$/django_project/personal/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_project/personal/models/manage_module.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Test-and-development-platform-I.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Test-and-development-platform-I.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_project/static/css/materialdesignicons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_project/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_project/static/css/vendor.bundle.base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_project/static/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_project/static/img/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_project/static/js/hoverable-collapse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_project/static/js/off-canvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_project/static/js/template.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_project/static/js/vendor.bundle.base.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_project/personal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/models/manage_project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/django_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/models/manage_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/models/manage_module.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/models/manage_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/models/manage_project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/templates/manage_project.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/templates/manage_project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,20 +130,25 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/django_project/personal/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/django_project/personal/templates" />
       <recent name="$PROJECT_DIR$/django_project/personal/static/img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/django_project/static/js" />
+      <recent name="$PROJECT_DIR$/django_project/static/img" />
+      <recent name="$PROJECT_DIR$/django_project/static/css" />
       <recent name="$PROJECT_DIR$/django_project/personal/models" />
       <recent name="$PROJECT_DIR$/django_project" />
     </key>
@@ -190,7 +205,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -213,6 +228,9 @@
       <workItem from="1656219027267" duration="1023000" />
       <workItem from="1656230459400" duration="107000" />
       <workItem from="1656230697432" duration="6243000" />
+      <workItem from="1656579471466" duration="1207000" />
+      <workItem from="1656640484245" duration="14000" />
+      <workItem from="1656640508015" duration="14341000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1655731200453</created>
@@ -278,7 +296,7 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -307,8 +325,20 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="11" />
     <option name="LAST_COMMIT_MESSAGE" value="11" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="jinja2-line">
+          <url>file://$PROJECT_DIR$/django_project/personal/templates/manage_project.html</url>
+          <line>101</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test_and_development_platform_I$test.coverage" NAME="test Coverage Results" MODIFIED="1655704243599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

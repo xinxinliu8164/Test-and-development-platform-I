@@ -5,6 +5,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 
+from personal.models.manage_project import ManageProject
+
 
 def say_hello(requests):
     input_name = requests.GET.get('name', '')
@@ -42,7 +44,8 @@ def logout(requests):
 
 @login_required()  # 可保证manage页面只有登录成功的用户才能访问，退出的用户user将被删除，无法访问
 def manage_project(requests):
-    return render(requests, 'manage_project.html')
+    projects = ManageProject.objects.all()
+    return render(requests, 'manage_project.html', {"projects": projects})
 
 
 @login_required()
