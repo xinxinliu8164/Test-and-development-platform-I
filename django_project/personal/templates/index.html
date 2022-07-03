@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Majestic Admin</title>
-  <!-- plugins:css -->{% load static %}
-  {% load static %}
-  <link rel="stylesheet" href="{% static "css/materialdesignicons.min.css" %}">
-  <link rel="stylesheet" href="{% static "vendors/base/vendor.bundle.base.css" %}">
-  <!-- endinject -->
-  <!-- plugin css for this page -->
-  <!-- End plugin css for this page -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="{% static "css/style.css" %}">
-  <!-- endinject -->
-{#  <link rel="shortcut icon" href="{% static "img/favicon.png" %}"/>#}
-</head>
-
+{% block content %}
 <body>
   <div class="container-scroller">
     <div class="container-fluid page-body-wrapper full-page-wrapper">
@@ -69,16 +51,7 @@
     </div>
     <!-- page-body-wrapper ends -->
   </div>
-  <!-- container-scroller -->
-  <!-- plugins:js -->
-  <script src="{% static "js/vendor.bundle.base.js" %}"></script>
-  <!-- endinject -->
-  <!-- inject:js -->
-  <script src="{% static "js/off-canvas.js" %}"></script>
-  <script src="{% static "js/hoverable-collapse.js" %}"></script>
-  <script src="{% static "js/template.js" %}"></script>
   <!-- endinject -->
 </body>
-
-</html>
+{% endblock %}
 
