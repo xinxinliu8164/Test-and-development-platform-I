@@ -1,121 +1,121 @@
-{#<!DOCTYPE html>#}
-{#<html lang="en">#}
-{#<head>#}
-{#    {% block head %}#}
-{#    {% endblock %}#}
-{#    <meta charset="UTF-8">#}
-{#    cdn.jsdeliver.cn 无法访问， 更换域名为https://gcore.jsdelivr.net/ 或gcore.jsdelivr.net#}
-{#    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->#}
-{#    <link rel="icon" href="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/favicon.ico">#}
-{#    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/dashboard/">#}
-{#    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/signin/">#}
-{##}
-{#    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">#}
-{#    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->#}
-{#    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">#}
-{##}
-{#    <link href="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/dist/css/bootstrap.min.css" rel="stylesheet">#}
-{##}
-{#    <!-- Custom styles for this template -->#}
-{#    <link href="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/examples/signin/signin.css" rel="stylesheet">#}
-{##}
-{#    <!-- Custom styles for this template -->#}
-{#    <link href="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/examples/dashboard/dashboard.css" rel="stylesheet">#}
-{##}
-{#    <!-- Bootstrap core JavaScript#}
-{#    ================================================== -->#}
-{#    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->#}
-{#    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>#}
-{##}
-{#    <!-- Placed at the end of the document so the pages load faster -->#}
-{#    <script src="https://gcore.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>#}
-{#    <script>window.jQuery || document.write('<script src="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/assets/js/vendor/jquery.min.js"><\/script>')</script>#}
-{#    <script src="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/dist/js/bootstrap.min.js"></script>#}
-{#    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->#}
-{#    <script src="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/assets/js/vendor/holder.min.js"></script>#}
-{#   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->#}
-{#    <!--[if lt IE 9]><script src="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->#}
-{#    <script src="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/assets/js/ie-emulation-modes-warning.js"></script>#}
-{#    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->#}
-{#    <!--[if lt IE 9]>#}
-{#      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>#}
-{#      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>#}
-{#    <![endif]-->#}
-{#    <title>#}
-{##}
-{#        {% block title %}#}
-{##}
-{#        {% endblock %}#}
-{#    </title>#}
-{##}
-{#</head>#}
-{##}
-{#{% block content %}#}
-{##}
-{#{% endblock %}#}
-{##}
-{#</html>#}
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     {% block head %}
-
     {% endblock %}
+    <meta charset="UTF-8">
+{#    cdn.jsdeliver.cn 无法访问， 更换域名为https://gcore.jsdelivr.net/ 或gcore.jsdelivr.net#}
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="icon" href="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/favicon.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/dashboard/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/signin/">
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Majestic Admin</title>
-    <!-- plugins:css -->{% load static %}
-    {% load static %}
-    <link rel="stylesheet" href="{% static "css/materialdesignicons.min.css" %}">
-    <link rel="stylesheet" href="{% static "vendors/base/vendor.bundle.base.css" %}">
-    <!-- endinject -->
-    <!-- plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
-    <!-- endinject -->
-    {#  <link rel="shortcut icon" href="{% static "img/favicon.png" %}"/>#}
-    <link rel="stylesheet" href="{% static "css/dataTables.bootstrap4.css" %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
 
+    <link href="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
+    <link href="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/examples/signin/signin.css" rel="stylesheet">
 
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-    <!-- index.html-->
-    <script src="{% static "js/vendor.bundle.base.js" %}"></script>
-    <!-- endinject -->
-    <!-- inject:js -->
-    <script src="{% static "js/off-canvas.js" %}"></script>
-    <script src="{% static "js/hoverable-collapse.js" %}"></script>
-    <script src="{% static "js/template.js" %}"></script>
+    <!-- Custom styles for this template -->
+    <link href="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/examples/dashboard/dashboard.css" rel="stylesheet">
 
-    <!-- endinject -->
-    <!-- Plugin js for this page-->
-    <!-- manage_project.html-->
-    <script src="vendors/chart.js/Chart.min.js"></script>
-    <script src="vendors/datatables.net/jquery.dataTables.js"></script>
-    <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page-->
-    <script src="js/dashboard.js"></script>
-    <script src="js/data-table.js"></script>
-    <script src="js/jquery.dataTables.js"></script>
-    <script src="js/dataTables.bootstrap4.js"></script>
-    <!-- End custom js for this page-->
-    <script src="js/jquery.cookie.js" type="text/javascript"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://gcore.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/assets/js/vendor/holder.min.js"></script>
+   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="https://gcore.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.42/assets/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>
 
-    <title>接口自动化</title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
 
 </head>
-
 
 {% block content %}
 
 {% endblock %}
+
 </html>
+
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{##}
+{#<head>#}
+{#    {% block head %}#}
+{##}
+{#    {% endblock %}#}
+{##}
+{#    <!-- Required meta tags -->#}
+{#    <meta charset="utf-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">#}
+{#    <title>Majestic Admin</title>#}
+{#    <!-- plugins:css -->{% load static %}#}
+{#    {% load static %}#}
+{#    <link rel="stylesheet" href="{% static "css/materialdesignicons.min.css" %}">#}
+{#    <link rel="stylesheet" href="{% static "vendors/base/vendor.bundle.base.css" %}">#}
+{#    <!-- endinject -->#}
+{#    <!-- plugin css for this page -->#}
+{#    <!-- End plugin css for this page -->#}
+{#    <!-- inject:css -->#}
+{#    <link rel="stylesheet" href="{% static "css/style.css" %}">#}
+{#    <!-- endinject -->#}
+    {#  <link rel="shortcut icon" href="{% static "img/favicon.png" %}"/>#}
+{#    <link rel="stylesheet" href="{% static "css/dataTables.bootstrap4.css" %}">#}
+{##}
+{##}
+{##}
+{#    <!-- container-scroller -->#}
+{#    <!-- plugins:js -->#}
+{#    <!-- index.html-->#}
+{#    <script src="{% static "js/vendor.bundle.base.js" %}"></script>#}
+{#    <!-- endinject -->#}
+{#    <!-- inject:js -->#}
+{#    <script src="{% static "js/off-canvas.js" %}"></script>#}
+{#    <script src="{% static "js/hoverable-collapse.js" %}"></script>#}
+{#    <script src="{% static "js/template.js" %}"></script>#}
+{##}
+{#    <!-- endinject -->#}
+{#    <!-- Plugin js for this page-->#}
+{#    <!-- manage_project.html-->#}
+{#    <script src="vendors/chart.js/Chart.min.js"></script>#}
+{#    <script src="vendors/datatables.net/jquery.dataTables.js"></script>#}
+{#    <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>#}
+{#    <!-- endinject -->#}
+{#    <!-- Custom js for this page-->#}
+{#    <script src="js/dashboard.js"></script>#}
+{#    <script src="js/data-table.js"></script>#}
+{#    <script src="js/jquery.dataTables.js"></script>#}
+{#    <script src="js/dataTables.bootstrap4.js"></script>#}
+{#    <!-- End custom js for this page-->#}
+{#    <script src="js/jquery.cookie.js" type="text/javascript"></script>#}
+{##}
+{##}
+{#    <title>接口自动化</title>#}
+{##}
+{#</head>#}
+{##}
+{##}
+{#{% block content %}#}
+{##}
+{#{% endblock %}#}
+{#</html>#}
