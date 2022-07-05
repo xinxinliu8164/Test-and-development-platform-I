@@ -45,12 +45,33 @@ def logout(requests):
 @login_required()  # 可保证manage页面只有登录成功的用户才能访问，退出的用户user将被删除，无法访问
 def manage_project(requests):
     projects = ManageProject.objects.all()
-    return render(requests, 'manage_project.html', {"projects": projects})
+    return render(requests, 'manage_project.html', {"projects": projects, "type": "projects_list"})
+
+
+@login_required()
+def add_project(requests):
+    if requests.method == 'GET':
+        projects = ManageProject.objects.all()
+        return render(requests, 'manage_project.html', {"projects": projects, "type": "add_project"})
+    elif requests.method == "POST":
+        project_name = requests.POST.get("project_name")
+        project_describe = requests.POST.get("project_describe")
+        status = requests.POST.get("status")
+        p = ManageProject.objects.create(name=project_name, describe=project_describe, status=status)
+        projects = ManageProject.objects.all()
+    return render(requests, 'manage_project.html', {"projects": projects, "type": "projects_list"})
+
+
+@login_required()
+def edit_project(requests, pid):
+    if requests.method == 'GET':
+        return HttpResponse(f"要编辑的项目：{pid}")
 
 
 @login_required()
 def manage_module(requests):
     return render(requests, 'manage_module.html')
+
 
 @login_required()
 def manage_case(requests):

@@ -25,6 +25,8 @@ urlpatterns = [
     path('accounts/login/', views.index),
     path('logout/', views.logout),
     path('manage_project/', views.manage_project),
+    path('manage_project/add_project', views.add_project),
+    path('manage_project/edit_project/<int:pid>', views.edit_project),
     path('manage_module/', views.manage_module),
     path('manage_case/', views.manage_case),
 
