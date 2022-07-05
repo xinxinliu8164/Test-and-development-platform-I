@@ -105,6 +105,7 @@
           {% endif %}
 
           {% if type == "add_project" %}
+          <h4 class="sub-header">添加项目</h4>
           <form action="/manage_project/add_project" method="post">
               <div class="col-md-12">
                 <div class="form-group" style="display: flex;flex-direction: row">
@@ -139,7 +140,9 @@
           </form>
           {% endif %}
 
-            {% if type == "edit_project" %}
+          {% if type == "edit_project" %}
+          <h4 class="sub-header">编辑项目</h4>
+          <HR align=center width=300 color=#987cb9 SIZE=1>
           <form action="/manage_project/edit_project" method="post">
               <div class="col-md-12">
                 <div class="form-group" style="display: flex;flex-direction: row">
