@@ -141,16 +141,17 @@
           {% endif %}
 
           {% if type == "edit_project" %}
-          <h4 class="sub-header">编辑项目</h4>
-          <form action="/manage_project/edit_project/{{ pid }}" method="post">
-            {{ form }}
-            {% csrf_token %}
-            <div class="form-group" style="display: flex;flex-direction: row">
-                <input type="submit" class="btn btn-info" style="margin-left: 15px;" value="创建">
-            </div>
+              <h4 class="sub-header">编辑项目</h4>
+              <form method="post">
+                  {{ form.as_p }}
+                  {% csrf_token %}
+                  <div class="form-group" style="display: flex;flex-direction: row">
+                      <input type="submit" class="btn btn-info" style="margin-left: 15px;" value="确认">
+                  </div>
 
-          </form>
+              </form>
           {% endif %}
+
         </div>
       </div>
     </div>

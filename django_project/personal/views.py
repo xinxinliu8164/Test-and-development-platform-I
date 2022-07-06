@@ -6,6 +6,8 @@ from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 
 from personal.models.manage_project import ManageProject
+from personal.models.manage_module import ManageModule
+
 from personal.my_form import ProjectForm
 
 
@@ -60,8 +62,7 @@ def add_project(requests):
         project_describe = requests.POST.get("project_describe")
         status = requests.POST.get("status")
         p = ManageProject.objects.create(name=project_name, describe=project_describe, status=status)
-        projects = ManageProject.objects.all()
-    return render(requests, 'manage_project.html', {"projects": projects, "type": "projects_list"})
+        return HttpResponseRedirect('/manage_project/')
 
 
 @login_required()
@@ -78,13 +79,60 @@ def edit_project(requests, pid):
             project.describe = form.cleaned_data['describe']
             project.status = form.cleaned_data['status']
             project.save()
-        projects = ManageProject.objects.all()
-        return render(requests, 'manage_project.html', {"projects": projects, "type": "projects_list"})
+            print(project.name)
+        return HttpResponseRedirect('/manage_project/')
+
+
+@login_required()
+def delete_project(requests, pid):
+    if requests.method == "GET":
+        project = ManageProject.objects.get(id=pid)
+        project.delete()
+    return HttpResponseRedirect('/manage_project/')
+
 
 
 @login_required()
 def manage_module(requests):
-    return render(requests, 'manage_module.html')
+    modules = ManageModule.objects.all()
+    print(modules)
+    return render(requests, 'manage_module.html', {"modules": modules, "type": "module_list"})
+
+
+@login_required()
+def add_module(requests):
+    if requests.method == 'GET':
+        modules = ManageModule.objects.all()
+        return render(requests, 'manage_module.html', {"modules": modules, "type": "add_module"})
+    elif requests.method == "POST":
+        module_name = requests.POST.get("module_name")
+        module_describe = requests.POST.get("module_describe")
+        p = ManageModule.objects.create(name=module_name, describe=module_describe)
+        return HttpResponseRedirect('/manage_module/')
+
+
+@login_required()
+def edit_module(requests, mid):
+    if requests.method == 'GET':
+        module = ManageModule.objects.get(id=mid)
+        form = ProjectForm(instance=module)
+        return render(requests, f'manage_module.html', {"form": form, "mid": mid, "type": "edit_module"})
+    elif requests.method == "POST":
+        form = ProjectForm(requests.POST)
+        if form.is_valid():
+            module = ManageModule.objects.get(id=mid)
+            module.name = form.cleaned_data['name']
+            module.describe = form.cleaned_data['describe']
+            module.save()
+        return HttpResponseRedirect('/manage_module/')
+
+
+@login_required()
+def delete_module(requests, mid):
+    if requests.method == "GET":
+        project = ManageModule.objects.get(id=mid)
+        project.delete()
+    return HttpResponseRedirect('/manage_module/')
 
 
 @login_required()
