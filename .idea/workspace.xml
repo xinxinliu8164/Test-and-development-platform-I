@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2348ab7e-0a92-4331-907e-86edb27f7192" name="Default Changelist" comment="11">
+      <change afterPath="$PROJECT_DIR$/django_project/personal/my_form.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_project/personal/templates/manage_project.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/templates/manage_project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -6,6 +6,7 @@ from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 
 from personal.models.manage_project import ManageProject
+from personal.my_form import ProjectForm
 
 
 def say_hello(requests):
@@ -13,6 +14,7 @@ def say_hello(requests):
     if not input_name:
         return HttpResponse('请输入一个name')
     return render(requests, 'test.html', {'name': input_name})
+
 
 def index(requests):
     if requests.method == 'GET':
@@ -65,7 +67,19 @@ def add_project(requests):
 @login_required()
 def edit_project(requests, pid):
     if requests.method == 'GET':
-        return HttpResponse(f"要编辑的项目：{pid}")
+        project = ManageProject.objects.get(id=pid)
+        form = ProjectForm(instance=project)
+        return render(requests, f'manage_project.html', {"form": form, "pid": pid, "type": "edit_project"})
+    elif requests.method == "POST":
+        form = ProjectForm(requests.POST)
+        if form.is_valid():
+            project = ManageProject.objects.get(id=pid)
+            project.name = form.cleaned_data['name']
+            project.describe = form.cleaned_data['describe']
+            project.status = form.cleaned_data['status']
+            project.save()
+        projects = ManageProject.objects.all()
+        return render(requests, 'manage_project.html', {"projects": projects, "type": "projects_list"})
 
 
 @login_required()
