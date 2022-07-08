@@ -91,23 +91,25 @@ def delete_project(requests, pid):
     return HttpResponseRedirect('/manage_project/')
 
 
-
 @login_required()
 def manage_module(requests):
     modules = ManageModule.objects.all()
-    print(modules)
     return render(requests, 'manage_module.html', {"modules": modules, "type": "module_list"})
 
 
 @login_required()
 def add_module(requests):
     if requests.method == 'GET':
+        projects = ManageProject.objects.all()
         modules = ManageModule.objects.all()
-        return render(requests, 'manage_module.html', {"modules": modules, "type": "add_module"})
+        return render(requests, 'manage_module.html', {"modules": modules, "projects": projects, "type": "add_module"})
     elif requests.method == "POST":
+        module_project_name = requests.POST.get("project")
+        print("------->>>>", module_project_name)
+        project = ManageProject.objects.filter(name=module_project_name)[0]
         module_name = requests.POST.get("module_name")
         module_describe = requests.POST.get("module_describe")
-        p = ManageModule.objects.create(name=module_name, describe=module_describe)
+        ManageModule.objects.create(name=module_name, desc=module_describe, project_id=project.id)
         return HttpResponseRedirect('/manage_module/')
 
 
@@ -122,7 +124,7 @@ def edit_module(requests, mid):
         if form.is_valid():
             module = ManageModule.objects.get(id=mid)
             module.name = form.cleaned_data['name']
-            module.describe = form.cleaned_data['describe']
+            module.desc = form.cleaned_data['desc']
             module.save()
         return HttpResponseRedirect('/manage_module/')
 
