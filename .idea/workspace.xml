@@ -6,15 +6,33 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_project/personal/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_project/personal/models/manage_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/models/manage_module.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/django_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/django_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/models/manage_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/models/manage_project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/my_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/my_form.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_project/personal/templates/manage_module.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/templates/manage_module.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_project/personal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/views.py" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/django_project/personal/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -31,6 +49,8 @@
       <find>placeholders</find>
       <find>manage_module</find>
       <find>personal_managemodule</find>
+      <find>mid</find>
+      <find>pid</find>
     </findStrings>
     <replaceStrings>
       <replace>fastly.jsdelivr.net</replace>
@@ -62,19 +82,18 @@
         <option value="$PROJECT_DIR$/django_project/personal/models.py" />
         <option value="$PROJECT_DIR$/django_project/personal/templates/index.html" />
         <option value="$PROJECT_DIR$/django_project/personal/templates/base.html" />
-        <option value="$PROJECT_DIR$/django_project/personal/my_form.py" />
         <option value="$PROJECT_DIR$/django_project/personal/templates/manage_project.html" />
         <option value="$PROJECT_DIR$/django_project/django_project/urls.py" />
+        <option value="$PROJECT_DIR$/django_project/personal/my_form.py" />
         <option value="$PROJECT_DIR$/django_project/personal/templates/manage_module.html" />
+        <option value="$PROJECT_DIR$/django_project/personal/models/manage_project.py" />
         <option value="$PROJECT_DIR$/django_project/personal/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="407" />
-    <option name="y" value="25" />
-    <option name="width" value="1539" />
-    <option name="height" value="805" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectId" id="2B12sL7uAqXusnLrjhMYroJhvKk" />
   <component name="ProjectView">
@@ -82,6 +101,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -98,34 +118,12 @@
               <item name="Test-and-development-platform-I" type="b2602c69:ProjectViewProjectNode" />
               <item name="Test-and-development-platform-I" type="462c0819:PsiDirectoryNode" />
               <item name="django_project" type="462c0819:PsiDirectoryNode" />
-              <item name="personal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Test-and-development-platform-I" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Test-and-development-platform-I" type="462c0819:PsiDirectoryNode" />
               <item name="django_project" type="462c0819:PsiDirectoryNode" />
-              <item name="personal" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Test-and-development-platform-I" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Test-and-development-platform-I" type="462c0819:PsiDirectoryNode" />
-              <item name="django_project" type="462c0819:PsiDirectoryNode" />
-              <item name="personal" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Test-and-development-platform-I" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Test-and-development-platform-I" type="462c0819:PsiDirectoryNode" />
-              <item name="django_project" type="462c0819:PsiDirectoryNode" />
-              <item name="personal" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -140,9 +138,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/django_project/personal/templates" />
+      <recent name="$PROJECT_DIR$/django_project/personal/static/img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/django_project/static/img/manage_project" />
       <recent name="$PROJECT_DIR$/django_project/static/img/index" />
@@ -150,13 +153,20 @@
       <recent name="$PROJECT_DIR$/django_project/static/css/manage_project" />
       <recent name="$PROJECT_DIR$/django_project/static/js/manage_project" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/django_project/personal/templates" />
-      <recent name="$PROJECT_DIR$/django_project/personal/static/img" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Django server.django">
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Test-and-development-platform-I" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -201,14 +211,43 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="django" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Test-and-development-platform-I" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="django_project.settings" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.8" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="true" />
+      <option name="port" value="8000" />
+      <option name="host" value="127.0.0.1" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.django" />
+      <item itemvalue="Python.manage" />
+      <item itemvalue="Python.test" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.manage" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -237,6 +276,10 @@
       <workItem from="1656849221335" duration="3673000" />
       <workItem from="1656943383997" duration="5055000" />
       <workItem from="1657114960215" duration="7020000" />
+      <workItem from="1657427185042" duration="1419000" />
+      <workItem from="1657429313411" duration="43000" />
+      <workItem from="1657429583351" duration="1083000" />
+      <workItem from="1657446723785" duration="6407000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1655731200453</created>
@@ -249,7 +292,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44407000" />
+    <option name="totallyTimeSpent" value="53359000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -261,25 +304,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1440" height="805" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22889842" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24892704" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32956153" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3987952" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49930555" weight="0.32956153" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49930555" weight="0.32891566" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.056577086" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.22771084" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50069445" side_tool="true" weight="0.32005495" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32956153" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3421687" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -328,7 +371,22 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -347,7 +405,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -355,8 +412,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="11" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Test_and_development_platform_I$manage.coverage" NAME="manage Coverage Results" MODIFIED="1657428349210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/django_project" />
     <SUITE FILE_PATH="coverage/Test_and_development_platform_I$test.coverage" NAME="test Coverage Results" MODIFIED="1655704243599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Test_and_development_platform_I$manage.coverage" NAME="manage Coverage Results" MODIFIED="1655609105933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/django_project" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2019.1/python_stubs/-1199943125/builtins.py">
@@ -407,13 +464,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/django_project/personal/models.py" />
-    <entry file="file://$PROJECT_DIR$/django_project/personal/templates/manage_case.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_project/personal/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
@@ -449,59 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_project/personal/my_form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="61" lean-forward="true" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_project/personal/templates/manage_project.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="78" column="32" lean-forward="true" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_project/django_project/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding>
-            <element signature="e#638#670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_project/personal/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="97" column="17" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_project/personal/templates/manage_module.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="78" column="41" lean-forward="true" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
-          <folding>
-            <element signature="e#384#736#0#HTML" />
-            <element signature="e#874#1010#0#HTML" />
-            <element signature="e#1262#1832#0#HTML" />
-            <element signature="e#6826#6867#0#HTML" expanded="true" />
-            <element signature="e#6944#6970#0#HTML" expanded="true" />
-            <element signature="e#7379#7420#0#HTML" expanded="true" />
-            <element signature="e#7492#7518#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_project/personal/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-61" />
@@ -512,10 +509,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django_project/personal/models/manage_module.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        <state relative-caret-position="192">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="8" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_project/personal/templates/manage_case.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_project/personal/templates/manage_project.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="148" column="33" lean-forward="true" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_project/personal/my_form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_project/django_project/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+          <folding>
+            <element signature="e#638#670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_project/personal/models/manage_project.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_project/personal/templates/manage_module.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="94" column="41" lean-forward="true" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_project/personal/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -8,8 +8,9 @@ from django.contrib.auth.decorators import login_required
 from personal.models.manage_project import ManageProject
 from personal.models.manage_module import ManageModule
 
-from personal.my_form import ProjectForm
+from personal.my_form import ProjectForm, ModuleForm
 
+import json
 
 def say_hello(requests):
     input_name = requests.GET.get('name', '')
@@ -101,15 +102,16 @@ def manage_module(requests):
 def add_module(requests):
     if requests.method == 'GET':
         projects = ManageProject.objects.all()
+        #print(json.dumps(projects, indent=2,ensure_ascii=False))
         modules = ManageModule.objects.all()
         return render(requests, 'manage_module.html', {"modules": modules, "projects": projects, "type": "add_module"})
     elif requests.method == "POST":
-        module_project_name = requests.POST.get("project")
-        print("------->>>>", module_project_name)
-        project = ManageProject.objects.filter(name=module_project_name)[0]
+        project_id = requests.POST.get("project")
+        print("------->>>>", project_id)
+        # project = ManageProject.objects.filter(name=module_project_name)[0]
         module_name = requests.POST.get("module_name")
         module_describe = requests.POST.get("module_describe")
-        ManageModule.objects.create(name=module_name, desc=module_describe, project_id=project.id)
+        ManageModule.objects.create(name=module_name, desc=module_describe, project_id=project_id)
         return HttpResponseRedirect('/manage_module/')
 
 
@@ -117,12 +119,14 @@ def add_module(requests):
 def edit_module(requests, mid):
     if requests.method == 'GET':
         module = ManageModule.objects.get(id=mid)
-        form = ProjectForm(instance=module)
-        return render(requests, f'manage_module.html', {"form": form, "mid": mid, "type": "edit_module"})
+        form = ModuleForm(instance=module)
+        print("****", form)
+        return render(requests, f'manage_module.html', {"form": form, "type": "edit_module"})
     elif requests.method == "POST":
-        form = ProjectForm(requests.POST)
+        form = ModuleForm(requests.POST)
         if form.is_valid():
             module = ManageModule.objects.get(id=mid)
+            # module.project =
             module.name = form.cleaned_data['name']
             module.desc = form.cleaned_data['desc']
             module.save()
@@ -132,8 +136,8 @@ def edit_module(requests, mid):
 @login_required()
 def delete_module(requests, mid):
     if requests.method == "GET":
-        project = ManageModule.objects.get(id=mid)
-        project.delete()
+        module = ManageModule.objects.get(id=mid)
+        module.delete()
     return HttpResponseRedirect('/manage_module/')
 
 
