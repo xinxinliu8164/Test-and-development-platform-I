@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2348ab7e-0a92-4331-907e-86edb27f7192" name="Default Changelist" comment="11">
-      <change beforePath="$PROJECT_DIR$/.idea/Test-and-development-platform-I.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Test-and-development-platform-I.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_project/django_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/django_project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_project/personal/models/manage_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/models/manage_project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_project/personal/my_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/my_form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_project/personal/templates/manage_module.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/templates/manage_module.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_project/personal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django_project/personal/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+            <state relative-caret-position="686">
+              <caret line="142" selection-start-line="142" selection-end-line="142" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -118,7 +110,17 @@
               <item name="Test-and-development-platform-I" type="b2602c69:ProjectViewProjectNode" />
               <item name="Test-and-development-platform-I" type="462c0819:PsiDirectoryNode" />
               <item name="django_project" type="462c0819:PsiDirectoryNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test-and-development-platform-I" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test-and-development-platform-I" type="462c0819:PsiDirectoryNode" />
               <item name="django_project" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test-and-development-platform-I" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -279,7 +281,7 @@
       <workItem from="1657427185042" duration="1419000" />
       <workItem from="1657429313411" duration="43000" />
       <workItem from="1657429583351" duration="1083000" />
-      <workItem from="1657446723785" duration="6407000" />
+      <workItem from="1657446723785" duration="7292000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1655731200453</created>
@@ -292,7 +294,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53359000" />
+    <option name="totallyTimeSpent" value="54244000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -305,7 +307,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24892704" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -567,8 +568,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django_project/personal/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+        <state relative-caret-position="686">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
