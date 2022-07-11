@@ -2,29 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2348ab7e-0a92-4331-907e-86edb27f7192" name="Default Changelist" comment="11">
+      <change afterPath="$PROJECT_DIR$/django_project/modules/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_project/modules/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_project/projects/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_project/projects/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Test-and-development-platform-I.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Test-and-development-platform-I.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/django_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/django_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/django_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/modules/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/modules/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/modules/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/modules/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/migrations/0002_auto_20220701_0743.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/migrations/0003_managemodule.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/models/manage_module.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/models/manage_project.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/my_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/my_form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/templates/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/templates/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/templates/manage_case.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/templates/manage_case.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/templates/manage_module.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/templates/manage_module.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/templates/manage_project.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/templates/manage_project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/templates/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/personal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/personal/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/projects/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/projects/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/projects/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/projects/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/projects/views.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/django_project/personal/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="686">
-              <caret line="142" selection-start-line="142" selection-end-line="142" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -149,26 +162,14 @@
       <recent name="$PROJECT_DIR$/django_project/personal/static/img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/django_project" />
       <recent name="$PROJECT_DIR$/django_project/static/img/manage_project" />
       <recent name="$PROJECT_DIR$/django_project/static/img/index" />
       <recent name="$PROJECT_DIR$/django_project/static/css/index" />
       <recent name="$PROJECT_DIR$/django_project/static/css/manage_project" />
-      <recent name="$PROJECT_DIR$/django_project/static/js/manage_project" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Django server.django">
+  <component name="RunManager" selected="Django Server.django">
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Test-and-development-platform-I" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -238,7 +239,7 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Django server.django" />
+      <item itemvalue="Django Server.django" />
       <item itemvalue="Python.manage" />
       <item itemvalue="Python.test" />
     </list>
@@ -249,7 +250,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -372,22 +373,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -406,6 +392,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -413,8 +400,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="11" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Test_and_development_platform_I$manage.coverage" NAME="manage Coverage Results" MODIFIED="1657428349210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/django_project" />
     <SUITE FILE_PATH="coverage/Test_and_development_platform_I$test.coverage" NAME="test Coverage Results" MODIFIED="1655704243599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Test_and_development_platform_I$manage.coverage" NAME="manage Coverage Results" MODIFIED="1655609105933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/django_project" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2019.1/python_stubs/-1199943125/builtins.py">
