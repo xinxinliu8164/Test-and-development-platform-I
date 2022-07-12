@@ -42,7 +42,3 @@ def logout(requests):
 
 
 
-@login_required()
-def manage_case(requests):
-    return render(requests, 'manage_case.html')
-

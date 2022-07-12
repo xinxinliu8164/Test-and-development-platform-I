@@ -29,6 +29,9 @@ urlpatterns = [
 
     path('', include("projects.urls")),
 
-    path('', include("modules.urls"))
+    path('', include("modules.urls")),
+
+    path('', include("cases.urls"))
+
 
 ]

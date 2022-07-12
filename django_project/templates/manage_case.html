@@ -18,24 +18,22 @@
 
 
 {% block content %}
-
+    {% csrf_token %}
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
+            <span class="sr-only">Toggle 自动化平台</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">自动化平台</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="#">帮助</a></li>
+            <li><a href="#">退出</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -60,63 +58,129 @@
             <li><a href="">测试工具</a></li>
           </ul>
         </div>
-      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard</h1>
 
-          <div class="row placeholders">
-              {#              <div class="col-xs-6 col-sm-3 placeholder">#}
-              {#                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">#}
-              {#                  <h4>Label</h4>#}
-              {#                  <span class="text-muted">Something else</span>#}
-              {#              </div>#}
-              {#              <div class="col-xs-6 col-sm-3 placeholder">#}
-              {#                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">#}
-              {#                  <h4>Label</h4>#}
-              {#                  <span class="text-muted">Something else</span>#}
-              {#              </div>#}
-              {#              <div class="col-xs-6 col-sm-3 placeholder">#}
-              {#                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">#}
-              {#                  <h4>Label</h4>#}
-              {#                  <span class="text-muted">Something else</span>#}
-              {#              </div>#}
-              {#              <div class="col-xs-6 col-sm-3 placeholder">#}
-              {#                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">#}
-              {#                  <h4>Label</h4>#}
-              {#                  <span class="text-muted">Something else</span>#}
-              {#              </div>#}
+
+          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    {#          <h1 class="page-header">postman</h1>#}
+
+              <div class="row placeholders">
+              </div>
+              <h4 class="sub-header">POSTMAN</h4>
+    {#          <div class="table-responsive">#}
+              <div class="row">
+                  <div class="col-sm-12">
+                      <div style="margin-left: 20px;margin-right: 20px; width: 80%">
+
+                          <!--URL-->
+                          <div class="input-group">
+                              <span class="input-group-addon" style="margin-top: 5px;margin-right: 10px;"> * URL：</span>
+                              <input id="req_url" type="text" class="form-control" value="http">
+                          </div>
+
+                          <!--请求方法-->
+                          <div class="create-option" style="margin-top: 10px;">
+                              <label>* 请求方法：</label>
+                              <label class="radio-inline">
+                                  <input type="radio" name="req_method" id="get" value="get" checked> GET
+                              </label>
+                              <label class="radio-inline">
+                                  <input type="radio" name="req_method" id="post" value="post"> POST
+                              </label>
+                          </div>
+
+                          <!--请求头-->
+                          <div class="input-group">
+                              <span class="input-group-addon" style="margin-top: 5px;margin-right: 10px;"> header：</span>
+                              <input id="header_editor" type="text" class="form-control" value="header">
+                          </div>
+
+                          <!--参数类型-->
+                          <div style="margin-top: 10px;">
+                              <label>* 参数类型：</label>
+                              <label class="radio-inline">
+                                  <input type="radio" name="par_type" id="form" value="form" checked> form-data
+                              </label>
+                              <label class="radio-inline">
+                                  <input type="radio" name="par_type" id="json" value="json"> JSON
+                              </label>
+                          </div>
+
+                          <!--参数值-->
+                          <div class="input-group">
+                              <span class="input-group-addon" style="margin-top: 5px;margin-right: 10px;">参数：</span>
+                              <textarea id="parameters" class="form-control" name="project_describe" placeholder="请输入文本"></textarea>
+                          </div>
+                          <small id="emailHelp" class="form-text text-muted">说明：以字典的方式设置参数，如：{"id":1, "name":"名称"}.</small>
+
+                          <!--发送按钮-->
+                          <div style="float: right;margin-right: 10px;margin-top: 10px;">
+
+                              <button type="button" class="btn btn-primary" onclick="sendFun()">发送</button>
+                          </div>
+
+                          <!--接口返回值-->
+                          <div style="margin-top: 30px;">
+                              <p>返回结果：</p>
+                              <textarea id="result" class="form-control" rows="10" name=textarea></textarea>
+                          </div>
+
+                          <!--断言按钮-->
+                          <div style="float: right;margin-right: 10px; margin-top: 10px">
+                              <button type="button" class="btn btn-primary" onclick="assertFun()">断言</button>
+                          </div>
+
+                          <!--断言类型-->
+                          <div style="margin-top: 30px">
+                              <label>* 断言类型：</label>
+                              <label class="radio-inline">
+                                  <input type="radio" name="assert_type" id="include" value="include" checked> 包含
+                              </label>
+                              <label class="radio-inline">
+                                  <input type="radio" name="assert_type" id="equal" value="equal"> 相等
+                              </label>
+                          </div>
+
+                          <!--断言内容-->
+                          <div style="margin-top: 10px;">
+                              <textarea id="assert" class="form-control" rows="5" name=textarea></textarea>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
           </div>
-          <h2 class="sub-header">Section title</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
       </div>
-    </div>
+    </div>>
 
+    <script>
+
+        function sendFun(){
+            var req_url = $("#req_url").val();
+            var req_method = $("input[name='req_method']").val();
+            var header_editor = $("#header_editor").val();
+            var par_type = $("input[name='par_type']").val();
+            var parameters = $("#parameters").val();
+            var csrf = $("input[name='csrfmiddlewaretoken']").val();
+
+            if (req_url === ""){
+                window.alert("url 不能为空！");
+            }
+
+            $.post("/manage_case/debug",
+                {
+                    req_url:req_url,
+                    req_method: req_method,
+                    header_editor: header_editor,
+                    par_type: par_type,
+                    parameters: parameters,
+                    csrfmiddlewaretoken: csrf
+                },
+                function(data, status){
+                    $("#result").text(data);
+                    console.log("数据："+data+"||"+"状态："+status)
+                }
+            );
+        }
+
+    </script>
 {% endblock %}
