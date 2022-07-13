@@ -18,4 +18,5 @@ from cases import views
 urlpatterns = [
     path('manage_case/', views.manage_case),
     path('manage_case/debug', views.debug),
+    path('manage_case/case_assert', views.case_assert),
 ]

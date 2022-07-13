@@ -91,7 +91,7 @@
                           <!--请求头-->
                           <div class="input-group">
                               <span class="input-group-addon" style="margin-top: 5px;margin-right: 10px;"> header：</span>
-                              <input id="header_editor" type="text" class="form-control" value="header">
+                              <input id="header_editor" type="text" class="form-control" value="{}">
                           </div>
 
                           <!--参数类型-->
@@ -108,7 +108,7 @@
                           <!--参数值-->
                           <div class="input-group">
                               <span class="input-group-addon" style="margin-top: 5px;margin-right: 10px;">参数：</span>
-                              <textarea id="parameters" class="form-control" name="project_describe" placeholder="请输入文本"></textarea>
+                              <textarea id="parameters" class="form-control" name="project_describe" >{}</textarea>
                           </div>
                           <small id="emailHelp" class="form-text text-muted">说明：以字典的方式设置参数，如：{"id":1, "name":"名称"}.</small>
 
@@ -121,7 +121,7 @@
                           <!--接口返回值-->
                           <div style="margin-top: 30px;">
                               <p>返回结果：</p>
-                              <textarea id="result" class="form-control" rows="10" name=textarea></textarea>
+                              <textarea id="result" class="form-control" rows="10" name="textarea" placeholder="实际响应结果..."></textarea>
                           </div>
 
                           <!--断言按钮-->
@@ -133,17 +133,31 @@
                           <div style="margin-top: 30px">
                               <label>* 断言类型：</label>
                               <label class="radio-inline">
-                                  <input type="radio" name="assert_type" id="include" value="include" checked> 包含
+                                  <input type="radio" name="assert_type" id="include" value="contains" checked> Contains
                               </label>
                               <label class="radio-inline">
-                                  <input type="radio" name="assert_type" id="equal" value="equal"> 相等
+                                  <input type="radio" name="assert_type" id="equal" value="equal"> Equal
                               </label>
                           </div>
 
                           <!--断言内容-->
                           <div style="margin-top: 10px;">
-                              <textarea id="assert" class="form-control" rows="5" name=textarea></textarea>
+                              <textarea id="assert" class="form-control" rows="5" name="textarea" placeholder="请输入预期结果..."></textarea>
                           </div>
+
+                          <!--项目名称-->
+                          <div class="form-group" style="display: flex;flex-direction: row">
+                                <label class="col-sm-2 control-label" style="width: 85px;padding-right: 0px;">项目名称：</label>
+                                <div class="col-sm-7">
+
+                                    <select name="project" style="width: 202px;height: 32px;">
+                                      {% for p in projects %}
+                                      <option value="{{ p.id }}">{{ p.name }}</option>
+                                      {% endfor %}
+                                    </select>
+                                </div>
+                          </div>
+                          <!--模块名称-->
 
                       </div>
                   </div>
@@ -155,12 +169,12 @@
     <script>
 
         function sendFun(){
-            var req_url = $("#req_url").val();
-            var req_method = $("input[name='req_method']").val();
-            var header_editor = $("#header_editor").val();
-            var par_type = $("input[name='par_type']").val();
-            var parameters = $("#parameters").val();
             var csrf = $("input[name='csrfmiddlewaretoken']").val();
+            var req_url = $("#req_url").val();
+            var req_method = $("input[name='req_method']:checked").val();
+            var header_editor = $("#header_editor").val();
+            var par_type = $("input[name='par_type']:checked").val();
+            var parameters = $("#parameters").val();
 
             if (req_url === ""){
                 window.alert("url 不能为空！");
@@ -168,16 +182,40 @@
 
             $.post("/manage_case/debug",
                 {
+                    csrfmiddlewaretoken: csrf,
                     req_url:req_url,
                     req_method: req_method,
                     header_editor: header_editor,
                     par_type: par_type,
-                    parameters: parameters,
-                    csrfmiddlewaretoken: csrf
+                    parameters: parameters
                 },
                 function(data, status){
-                    $("#result").text(data);
+                    $("#result").text(data.result);
                     console.log("数据："+data+"||"+"状态："+status)
+                }
+            );
+        }
+
+        function assertFun(){
+            var csrf = $("input[name='csrfmiddlewaretoken']").val();
+            var actual_result = $("#result").val();
+            var expect_result = $("#assert").val();
+            var assert_type = $("input[name='assert_type']:checked").val();
+
+            if (actual_result === '' || expect_result === ''){
+                window.alert("实际结果 或 预期结果 不能为空！");
+            }
+
+            $.post("/manage_case/case_assert",
+                {
+                    csrfmiddlewaretoken: csrf,
+                    actual_result: actual_result,
+                    expect_result: expect_result,
+                    assert_type: assert_type
+                },
+                function (data, status){
+                    console.log("数据："+data+"||"+"状态："+status);
+                    window.alert(data.result)
                 }
             );
         }
