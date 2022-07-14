@@ -146,16 +146,15 @@
                           </div>
 
                           <!--项目名称-->
-                          <div class="form-group" style="display: flex;flex-direction: row">
+                          <div class="form-group" style="display: flex;flex-direction: row; margin-top: 30px">
                                 <label class="col-sm-2 control-label" style="width: 85px;padding-right: 0px;">项目名称：</label>
-                                <div class="col-sm-7">
 
-                                    <select name="project" style="width: 202px;height: 32px;">
-                                      {% for p in projects %}
-                                      <option value="{{ p.id }}">{{ p.name }}</option>
-                                      {% endfor %}
-                                    </select>
-                                </div>
+                                <select class="bootstrap-select">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Barbecue</option>
+                                </select>
+
                           </div>
                           <!--模块名称-->
 
