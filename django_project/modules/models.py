@@ -11,3 +11,7 @@ class ManageModule(models.Model):
     desc = models.CharField("模块描述", max_length=50, default='')
     update_time = models.DateTimeField("更新时间", auto_now=True)
     create_time = models.DateTimeField("创建时间", auto_now_add=True)
+
+    def __str__(self):
+        # return u'{0}'.format(self.name)
+        return self.name

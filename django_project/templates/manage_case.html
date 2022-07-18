@@ -146,17 +146,28 @@
                           </div>
 
                           <!--项目名称-->
-                          <div class="form-group" style="display: flex;flex-direction: row; margin-top: 30px">
-                                <label class="col-sm-2 control-label" style="width: 85px;padding-right: 0px;">项目名称：</label>
+                          <div class="form-group" style="display: flex;flex-direction: row;justify-content: space-around; margin-top: 30px">
+                              <div>
+                                  <label >项目：</label>
+                                  <select class="bootstrap-select" id="selectProject" style="height: 35px;">
+                                  </select>
+                              </div>
+                              <div>
+                                  <label >模块：</label>
+                                  <select class="bootstrap-select" id="selectModule" style="height: 35px;">
 
-                                <select class="bootstrap-select">
-                                    <option>Mustard</option>
-                                    <option>Ketchup</option>
-                                    <option>Barbecue</option>
-                                </select>
-
+                                  </select>
+                              </div>
+                              <div style="display: flex;flex-direction: row;">
+                                  <label style="width: 120px;line-height: 34px">用例名称：</label>
+                                  <input id="case_name" type="text" class="form-control" style="height: 35px;line-height: 34px">
+                              </div>
                           </div>
-                          <!--模块名称-->
+
+
+                              <div style="width: 100%;display: flex;justify-content: right">
+                                  <button type="button" class="btn btn-primary" onclick="saveFun()">保存</button>
+                              </div>
 
                       </div>
                   </div>
@@ -166,6 +177,7 @@
     </div>>
 
     <script>
+        SelectInit();
 
         function sendFun(){
             var csrf = $("input[name='csrfmiddlewaretoken']").val();
@@ -217,6 +229,46 @@
                     window.alert(data.result)
                 }
             );
+        }
+
+        function saveFun() {
+            var csrf = $("input[name='csrfmiddlewaretoken']").val();
+
+            var case_name = $("#case_name").val();
+            var module_id = $("#selectModule option:selected").attr('value');
+
+            var url = $("#req_url").val();
+            var req_method = $("input[name='req_method']:checked").val();
+            var header_editor = $("#header_editor").val();
+            var par_type = $("input[name='par_type']:checked").val();
+            var parameters = $("#parameters").val();
+            var rep_result = $("#result").val();
+            var assert_type = $("input[name='assert_type']:checked").val();
+            var assert_text = $("#assert").val();
+
+            if (case_name === '' || module_id === '' || url === '' || req_method === ''){
+                window.alert("用例信息缺失，请完善用例信息: 用例名称/模块/url/请求方法")
+            }
+
+            $.post("/manage_case/save_case",
+                {
+                    csrfmiddlewaretoken: csrf,
+                    case_name: case_name,
+                    module_id: module_id,
+                    url: url,
+                    req_method: req_method,
+                    header_editor: header_editor,
+                    par_type: par_type,
+                    parameters: parameters,
+                    rep_result: rep_result,
+                    assert_type: assert_type,
+                    assert_text: assert_text
+                },
+                function(req){
+                    console.log(req.msg);
+                    window.alert(req.msg)
+                }
+                );
         }
 
     </script>
