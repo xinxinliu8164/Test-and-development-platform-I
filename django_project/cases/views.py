@@ -13,7 +13,13 @@ from cases.models import TestCase
 @login_required()
 def manage_case(request):
     projects = ManageProject.objects.all()
-    return render(request, 'manage_case.html', {"projects": projects})
+    cases = TestCase.objects.all()
+    return render(request, 'manage_case.html', {"cases": cases})
+
+
+@login_required()
+def case_add(request):
+    return render(request, 'case_add.html')
 
 
 @login_required()
@@ -82,6 +88,7 @@ def case_assert(request):
         else:
             return JsonResponse({"result": "断言失败"})
 
+
 def get_select_data(request):
     """获取项目数据"""
     if request.method == "GET":
@@ -106,9 +113,9 @@ def get_select_data(request):
 
             data_list.append(project_info)
 
-        return JsonResponse({"status": "10200","msg": "success", "data": data_list})
+        return JsonResponse({"status": "10200", "msg": "success", "data": data_list})
     else:
-        return JsonResponse({"status": "10500","msg": "请求方法错误"})
+        return JsonResponse({"status": "10500", "msg": "请求方法错误"})
 
 
 @login_required()

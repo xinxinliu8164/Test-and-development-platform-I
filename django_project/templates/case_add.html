@@ -1,0 +1,275 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{#<a href="/logout/">退出</a>#}
+{#<h1>登录成功</h1>#}
+{##}
+{#</body>#}
+{#</html>#}
+{% extends 'base.html' %}
+
+{% block title %}
+接口自动化
+{% endblock %}
+
+
+{% block content %}
+    {% csrf_token %}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle 自动化平台</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">自动化平台</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">帮助</a></li>
+            <li><a href="#">退出</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="/manage_project/">项目管理</a></li>
+            <li><a href="/manage_module/">模块管理</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="/manage_case/">用例管理 <span class="sr-only">(current)</span></a></li>
+            <li><a href="">任务管理</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Mock Server</a></li>
+            <li><a href="">测试工具</a></li>
+          </ul>
+        </div>
+
+
+          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    {#          <h1 class="page-header">postman</h1>#}
+
+              <div class="row placeholders">
+              </div>
+              <h4 class="sub-header">创建用例</h4>
+    {#          <div class="table-responsive">#}
+              <div class="row">
+                  <div class="col-sm-12">
+                      <div style="margin-left: 20px;margin-right: 20px; width: 80%">
+
+                          <!--URL-->
+                          <div class="input-group">
+                              <span class="input-group-addon" style="margin-top: 5px;margin-right: 10px;"> * URL：</span>
+                              <input id="req_url" type="text" class="form-control" value="http">
+                          </div>
+
+                          <!--请求方法-->
+                          <div class="create-option" style="margin-top: 10px;">
+                              <label>* 请求方法：</label>
+                              <label class="radio-inline">
+                                  <input type="radio" name="req_method" id="get" value="get" checked> GET
+                              </label>
+                              <label class="radio-inline">
+                                  <input type="radio" name="req_method" id="post" value="post"> POST
+                              </label>
+                          </div>
+
+                          <!--请求头-->
+                          <div class="input-group">
+                              <span class="input-group-addon" style="margin-top: 5px;margin-right: 10px;"> header：</span>
+                              <input id="header_editor" type="text" class="form-control" value="{}">
+                          </div>
+
+                          <!--参数类型-->
+                          <div style="margin-top: 10px;">
+                              <label>* 参数类型：</label>
+                              <label class="radio-inline">
+                                  <input type="radio" name="par_type" id="form" value="form" checked> form-data
+                              </label>
+                              <label class="radio-inline">
+                                  <input type="radio" name="par_type" id="json" value="json"> JSON
+                              </label>
+                          </div>
+
+                          <!--参数值-->
+                          <div class="input-group">
+                              <span class="input-group-addon" style="margin-top: 5px;margin-right: 10px;">参数：</span>
+                              <textarea id="parameters" class="form-control" name="project_describe" >{}</textarea>
+                          </div>
+                          <small id="emailHelp" class="form-text text-muted">说明：以字典的方式设置参数，如：{"id":1, "name":"名称"}.</small>
+
+                          <!--发送按钮-->
+                          <div style="float: right;margin-right: 10px;margin-top: 10px;">
+
+                              <button type="button" class="btn btn-primary" onclick="sendFun()">发送</button>
+                          </div>
+
+                          <!--接口返回值-->
+                          <div style="margin-top: 30px;">
+                              <p>返回结果：</p>
+                              <textarea id="result" class="form-control" rows="10" name="textarea" placeholder="实际响应结果..."></textarea>
+                          </div>
+
+                          <!--断言按钮-->
+                          <div style="float: right;margin-right: 10px; margin-top: 10px">
+                              <button type="button" class="btn btn-primary" onclick="assertFun()">断言</button>
+                          </div>
+
+                          <!--断言类型-->
+                          <div style="margin-top: 30px">
+                              <label>* 断言类型：</label>
+                              <label class="radio-inline">
+                                  <input type="radio" name="assert_type" id="include" value="contains" checked> Contains
+                              </label>
+                              <label class="radio-inline">
+                                  <input type="radio" name="assert_type" id="equal" value="equal"> Equal
+                              </label>
+                          </div>
+
+                          <!--断言内容-->
+                          <div style="margin-top: 10px;">
+                              <textarea id="assert" class="form-control" rows="5" name="textarea" placeholder="请输入预期结果..."></textarea>
+                          </div>
+
+                          <!--项目名称-->
+                          <div class="form-group" style="display: flex;flex-direction: row;justify-content: space-around; margin-top: 30px">
+                              <div>
+                                  <label >项目：</label>
+                                  <select class="bootstrap-select" id="selectProject" style="height: 35px;">
+                                  </select>
+                              </div>
+                              <div>
+                                  <label >模块：</label>
+                                  <select class="bootstrap-select" id="selectModule" style="height: 35px;">
+
+                                  </select>
+                              </div>
+                              <div style="display: flex;flex-direction: row;">
+                                  <label style="width: 120px;line-height: 34px">用例名称：</label>
+                                  <input id="case_name" type="text" class="form-control" style="height: 35px;line-height: 34px">
+                              </div>
+                          </div>
+
+
+                              <div style="width: 100%;display: flex;justify-content: right">
+                                  <button type="button" class="btn btn-primary" onclick="saveFun()">保存</button>
+                              </div>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>>
+
+    <script>
+        SelectInit();
+
+        function sendFun(){
+            var csrf = $("input[name='csrfmiddlewaretoken']").val();
+            var req_url = $("#req_url").val();
+            var req_method = $("input[name='req_method']:checked").val();
+            var header_editor = $("#header_editor").val();
+            var par_type = $("input[name='par_type']:checked").val();
+            var parameters = $("#parameters").val();
+
+            if (req_url === ""){
+                window.alert("url 不能为空！");
+            }
+
+            $.post("/manage_case/case_add/debug",
+                {
+                    csrfmiddlewaretoken: csrf,
+                    req_url:req_url,
+                    req_method: req_method,
+                    header_editor: header_editor,
+                    par_type: par_type,
+                    parameters: parameters
+                },
+                function(data, status){
+                    $("#result").text(data.result);
+                    console.log("数据："+data+"||"+"状态："+status)
+                }
+            );
+        }
+
+        function assertFun(){
+            var csrf = $("input[name='csrfmiddlewaretoken']").val();
+            var actual_result = $("#result").val();
+            var expect_result = $("#assert").val();
+            var assert_type = $("input[name='assert_type']:checked").val();
+
+            if (actual_result === '' || expect_result === ''){
+                window.alert("实际结果 或 预期结果 不能为空！");
+            }
+
+            $.post("/manage_case/case_add/case_assert",
+                {
+                    csrfmiddlewaretoken: csrf,
+                    actual_result: actual_result,
+                    expect_result: expect_result,
+                    assert_type: assert_type
+                },
+                function (data, status){
+                    console.log("数据："+data+"||"+"状态："+status);
+                    window.alert(data.result)
+                }
+            );
+        }
+
+        function saveFun() {
+            var csrf = $("input[name='csrfmiddlewaretoken']").val();
+
+            var case_name = $("#case_name").val();
+            var module_id = $("#selectModule option:selected").attr('value');
+
+            var url = $("#req_url").val();
+            var req_method = $("input[name='req_method']:checked").val();
+            var header_editor = $("#header_editor").val();
+            var par_type = $("input[name='par_type']:checked").val();
+            var parameters = $("#parameters").val();
+            var rep_result = $("#result").val();
+            var assert_type = $("input[name='assert_type']:checked").val();
+            var assert_text = $("#assert").val();
+
+            if (case_name === '' || module_id === '' || url === '' || req_method === ''){
+                window.alert("用例信息缺失，请完善用例信息: 用例名称/模块/url/请求方法")
+            }
+
+            $.post("/manage_case/case_add/save_case",
+                {
+                    csrfmiddlewaretoken: csrf,
+                    case_name: case_name,
+                    module_id: module_id,
+                    url: url,
+                    req_method: req_method,
+                    header_editor: header_editor,
+                    par_type: par_type,
+                    parameters: parameters,
+                    rep_result: rep_result,
+                    assert_type: assert_type,
+                    assert_text: assert_text
+                },
+                function(req){
+                    console.log(req.msg);
+                    window.alert(req.msg)
+                }
+                );
+        }
+
+    </script>
+{% endblock %}
