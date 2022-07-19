@@ -17,8 +17,10 @@ from cases import views
 
 urlpatterns = [
     path('manage_case/', views.manage_case),
-    path('manage_case/debug', views.debug),
-    path('manage_case/case_assert', views.case_assert),
-    path('manage_case/get_select_data', views.get_select_data),
-    path('manage_case/save_case', views.save_case)
+
+    path('manage_case/case_add', views.case_add),
+    path('manage_case/case_add/debug', views.debug),
+    path('manage_case/case_add/case_assert', views.case_assert),
+    path('manage_case/case_add/get_select_data', views.get_select_data),
+    path('manage_case/case_add/save_case', views.save_case)
 ]

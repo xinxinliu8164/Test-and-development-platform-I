@@ -38,7 +38,7 @@ var SelectInit = function () {
 
     // 获取select对象列表
     function getSelectData() {
-        $.get("/manage_case/get_select_data", {}, function (resp) {
+        $.get("/manage_case/case_add/get_select_data", {}, function (resp) {
             if (resp.status === '10200') {
                 dataList = resp.data;
 
