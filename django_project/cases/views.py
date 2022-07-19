@@ -12,9 +12,19 @@ from cases.models import TestCase
 # Create your views here.
 @login_required()
 def manage_case(request):
-    projects = ManageProject.objects.all()
     cases = TestCase.objects.all()
     return render(request, 'manage_case.html', {"cases": cases})
+
+
+
+@login_required()
+def case_edit(request):
+    pass
+
+
+@login_required()
+def case_delete(request):
+    pass
 
 
 @login_required()
